@@ -1,0 +1,41 @@
+$fontsPath: '../fonts/';
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+    
+    src: url(#{$fontsPath}Montserrat-Medium.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    
+    src: url(#{$fontsPath}Montserrat-SemiBold.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    
+    src: url(#{$fontsPath}Montserrat-Bold.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    font-weight: 400;
+    font-style: normal;
+    
+    src: url(#{$fontsPath}FiraSans-Regular.woff2) format('woff2'),
+}
+
+@font-face {
+    font-family: 'FiraSans';
+    font-weight: 500;
+    font-style: normal;
+    
+    src: url(#{$fontsPath}FiraSans-Medium.woff2) format('woff2'),
+}

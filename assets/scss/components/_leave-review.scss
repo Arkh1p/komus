@@ -1,0 +1,36 @@
+.leave-review {
+    margin-top: rem(48);
+
+    @media #{$screen-mobile} {
+        margin-top: rem(24);
+    }
+
+    &__title {
+        @include h2;
+
+        margin: 0 0 rem(24);
+
+        @media #{$screen-mobile} {
+            margin-bottom: rem(12);
+        }
+    }
+
+    &__steps {
+        display: flex;
+
+        margin: 0 rem(-12);
+
+        @media #{$screen-mobile} {
+            flex-direction: column;
+        }
+
+        &-single {
+            width: calc(100% / 4);
+            padding: 0 rem(12);
+
+            @media #{$screen-mobile} {
+                width: 100%;
+            }
+        }
+    }
+}

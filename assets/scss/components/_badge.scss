@@ -1,0 +1,18 @@
+.badge {
+    $size: rem(30px);
+
+    @include text-props($font-size-text-big, $line-height-xl, $font-weight-bold, $base-font-family);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $size;
+    height: $size;
+
+    pointer-events: none;
+
+    color: $white;
+    background-color: $persian-red;
+    border-radius: $border-radius-circle;
+}

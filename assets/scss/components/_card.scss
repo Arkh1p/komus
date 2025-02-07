@@ -1,0 +1,36 @@
+.card {
+    height: 100%;
+    padding: rem(24);
+
+    @media #{$screen-mobile} {
+        padding: rem(20);
+    }
+
+    &__icon {
+        color: $raven;
+
+        @media #{$screen-mobile} {
+            width: rem(48);
+            height: rem(48);
+        }
+    }
+
+    &__title {
+        @include text-props($font-size-title-more-tiny, $line-height-extra-lg, $font-weight-bold, $base-font-family);
+
+        margin-top: rem(12);
+        margin-bottom: rem(4);
+
+        @media #{$screen-mobile} {
+            margin-bottom: rem(8);
+        }
+    }
+
+    &__text {
+        @include text-props($baseFontSize, $line-height-md, $font-weight-normal, $custom-font-family);
+
+        @media #{$screen-mobile} {
+            line-height: rem(20);
+        }
+    }
+}

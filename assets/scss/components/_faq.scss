@@ -1,0 +1,21 @@
+.faq {
+    margin-top: rem(48);
+
+    @media #{$screen-mobile} {
+        margin-top: rem(24);
+    }
+
+    &__title {
+        @include h2;
+        line-height: rem(32);
+
+        margin-top: 0;
+        margin-bottom: rem(20);
+
+        @media #{$screen-mobile} {
+            @include text-props($font-size-text-big, $line-height-xl, $font-weight-bold, $base-font-family);
+        
+            margin-bottom: rem(12);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.icon {
+    &--grey {
+        color: $raven;
+    }
+
+    &--lightgrey {
+        color: $hit-gray;
+    }
+
+    &--24 {
+        $size: rem(24);
+
+        width: $size;
+        height: $size;
+    }
+
+    &--32 {
+        $size: rem(32);
+
+        width: $size;
+        height: $size;
+    }
+
+    &--40 {
+        $size: rem(40);
+
+        width: $size;
+        height: $size;
+    }
+}

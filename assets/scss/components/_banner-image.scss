@@ -1,0 +1,15 @@
+.banner-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+
+    @media #{$screen-mobile} {
+        max-height: rem(183);
+    }
+
+    &__inner {
+        max-width: rem(381);
+    }
+}

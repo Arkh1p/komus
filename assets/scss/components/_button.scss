@@ -1,0 +1,28 @@
+.button {
+    &--primary {
+        @include button-primary-red;
+
+        text-decoration: none;
+    }
+
+    &--link {
+        @include text-props($font-size-text-main, $line-height-sm, $font-weight-normal, $custom-font-family);
+        
+        padding: 0;
+
+        cursor: pointer;
+        transition: $transition-default;
+
+        color: $curious-blue;
+        background: transparent;
+        border: none;
+
+        &:hover {
+            color: $denim;
+        }
+
+        &:active {
+            color: $boston-blue;
+        }
+    }
+}

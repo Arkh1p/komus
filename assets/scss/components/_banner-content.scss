@@ -1,0 +1,28 @@
+.banner-content {
+    &__title {
+        @include h1;
+
+        margin: 0 0 rem(8);
+    }
+
+    &__span {
+        display: flex;
+
+        &-button {
+            display: flex;
+            align-items: center;
+
+            text-align: start;
+
+            @media #{$screen-mobile} {
+                max-width: rem(250);
+            }
+
+            & .button__icon {
+                flex-shrink: 0;
+
+                margin-right: rem(4);
+            }
+        }
+    }
+}

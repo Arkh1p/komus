@@ -1,0 +1,76 @@
+.accordion {
+    &__item {
+        background-color: $zircon;
+        border-radius: $border-radius;
+
+        &:not(:last-child) {
+            margin-bottom: rem(12);
+        }
+
+        &-title {
+            @include text-props($font-size-title-more-tiny, $line-height-xl, $font-weight-bold, $base-font-family);
+
+            position: relative;
+
+            display: block;
+            
+            width: calc(100% - 24px);
+            margin: 0;
+            padding: rem(14);
+            
+            cursor: pointer;
+            transition: $transition-duration;
+
+            &::after {
+                $size: rem(24);
+
+                position: absolute;
+                top: rem(14);
+                right: rem(-10);
+
+                display: block;
+
+                width: $size;
+                height: $size;
+
+                content: "";
+                transition: $transition-default;
+
+                background-image: url("data:image/svg+xml,%3Csvg width='24.000000' height='24.000000' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3CclipPath id='clip474_7642'%3E%3Crect id='ui/arrow_down' rx='0.000000' width='23.000000' height='23.000000' transform='translate(0.500000 0.500000)' fill='white' fill-opacity='0'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23clip474_7642)'%3E%3Cpath id='Vector 384 (Stroke)' d='M3.21 7.71C3.51 7.42 3.98 7.42 4.28 7.71L11.46 14.8C11.76 15.09 12.23 15.09 12.53 14.8L19.71 7.71C20.01 7.42 20.48 7.42 20.78 7.71C21.07 8 21.07 8.47 20.78 8.76L13.59 15.85C12.71 16.71 11.28 16.71 10.4 15.85L3.21 8.76C2.92 8.47 2.92 8 3.21 7.71Z' fill='%236D778B' fill-opacity='1.000000' fill-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+
+            @media #{$screen-mobile} {
+                line-height: rem(22);
+            }
+        }
+
+        &-content {
+            @include text-props($baseFontSize, $line-height-md, $font-weight-normal, $custom-font-family);
+
+            overflow: hidden;
+
+            max-height: 0;
+            padding: 0 rem(14);
+
+            opacity: 0;
+            transition: all .4s ease;
+        }
+
+        &.active &{
+            &-content {
+                max-height: 500px;
+                margin-top: rem(-6);
+                padding-bottom: rem(14);
+    
+                opacity: 1;
+            }
+
+            &-title {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        
+    }
+}

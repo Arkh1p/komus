@@ -1,0 +1,24 @@
+.banner {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: $zircon;
+    border-radius: rem($border-radius-semi);
+
+    @media #{$screen-mobile} {
+        margin: 0 rem(-24);
+    }
+
+    &__inner {
+        padding: rem(18) rem(48);
+
+        @media #{$screen-mobile} {
+            padding: rem(194) rem(24) rem(24);
+        }
+
+        &-text {
+            max-width: rem(600);
+        }
+    }
+}

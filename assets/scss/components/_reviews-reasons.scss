@@ -1,0 +1,51 @@
+.reviews-reasons {
+    margin-top: rem(48);
+
+    @media #{$screen-mobile} {
+        margin-top: rem(24);
+    }
+
+    &__title {
+        @include text-props($font-size-title-extra-big, $line-height-extra-xxl, $font-weight-extraBold, $base-font-family);
+
+        margin-top: 0;
+        margin-bottom: rem(24);
+
+        @media #{$screen-mobile} {
+            @include text-props($font-size-text-big, $line-height-xl, $font-weight-bold, $base-font-family);
+
+            margin-top: rem(24);
+            margin-bottom: rem(12);
+        }
+    }
+
+    &__cards {
+        display: flex;
+
+        margin: 0 rem(-12);
+
+        @media #{$screen-mobile} {
+            flex-direction: column;
+        }
+
+        &-wrapper {
+            width: calc(100% / 3);
+            padding: 0 rem(12);
+
+            @media #{$screen-mobile} {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: rem(12);
+                }
+            }
+        }
+
+        &-single {
+            background-color: $white-lilac;
+            border-radius: $border-radius-semi;
+
+            
+        }
+    }
+}

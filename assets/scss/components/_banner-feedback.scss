@@ -1,0 +1,49 @@
+.banner-feedback {
+    margin-top: rem(48);
+
+    background-color: $white-lilac;
+    border-radius: $border-radius-semi;
+
+    @media #{$screen-mobile} {
+        margin-top: rem(24);
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: rem(24) rem(103.5);
+
+        @media #{$screen-mobile} {
+            flex-direction: column;
+
+            padding: rem(20);
+        }
+
+        &-title {
+            @include text-props($font-size-title-extra-big, $line-height-extra-xxl, $font-weight-extraBold, $base-font-family);
+        
+            @media #{$screen-mobile} {
+                @include text-props($font-size-title-more-tiny, $line-height-extra-lg, $font-weight-bold, $base-font-family);
+                
+                margin-bottom: rem(12);
+
+                text-align: center;
+            }
+        }
+
+        &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: rem(158);
+            height: rem(42);
+
+            @media #{$screen-mobile} {
+                width: 100%;
+            }
+        }
+    }
+}

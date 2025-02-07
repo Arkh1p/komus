@@ -1,0 +1,99 @@
+@mixin cut-text($line-count, $line-height) {
+    line-height: rem($line-height);
+    
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line-count;
+
+    height: rem($line-height * $line-count);
+}
+
+@mixin text-truncate-by-row($row: 2) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+  
+    word-wrap: break-word;
+}
+
+@mixin text-props($font-size: null, $line-height: null, $font-weight: null, $font-family: null, $font-style: null) {
+    @if $font-family {
+      font-family: $font-family;
+    }
+    @if $font-size {
+      font-size: rem($font-size);
+    }
+    @if $font-weight {
+      font-weight: $font-weight;
+    }
+    @if $font-style {
+      font-style: $font-style;
+    }
+    @if $font-size and $line-height {
+      line-height: calc($line-height / $font-size);
+    }
+}
+
+// size 36 / line-height 40 / weight 600
+@mixin h1 {
+  font-family: $base-font-family;
+  font-size: rem($font-size-title-large);
+  font-weight: $font-weight-extraBold;
+  line-height: rem($line-height-xxxl);
+
+  // size 22 / line-height 30 / weight 700
+  @media #{$screen-mobile} {
+    font-size: rem($font-size-text-large);
+    font-weight: $font-weight-bold;
+    line-height: rem($line-height-xxl);
+  }
+}
+
+// size 26 / line-height 32 / weight 600
+@mixin h2 {
+  font-family: $base-font-family;
+  font-size: rem($font-size-title-extra-big);
+  font-weight: $font-weight-extraBold;
+  line-height: rem($line-height-xxl);
+
+  // size 18 / line-height 24 / weight 700
+  @media #{$screen-mobile} {
+    font-size: rem($font-size-text-big);
+    font-weight: $font-weight-bold;
+    line-height: rem($line-height-xl);
+  }
+}
+
+@mixin button-primary-red {
+  @include text-props($font-size-title-more-tiny, $line-height-extra-lg, $font-weight-medium, $custom-font-family);
+
+  padding: rem(4) rem(6);
+
+  cursor: pointer;
+
+  text-transform: none;
+  letter-spacing: rem(0);
+  transition: $transition-default;
+
+  color: $white;
+  border-radius: rem($border-radius);
+  border: rem(2) solid $alizarin-crimson;
+  background-color: $alizarin-crimson;
+
+  &:hover {
+    border-color: $thunderbird;
+    background-color: $thunderbird;
+  }
+
+  &:active {
+    border-color: $persian-red;
+    background-color: $persian-red;
+  }
+
+  &:focus {
+    border-color: $sea-pink;
+    background-color: $persian-red;
+  }
+}

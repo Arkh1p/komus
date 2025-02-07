@@ -1,0 +1,86 @@
+//colors
+$white: #fff;
+$black: #000;
+
+$wild-sand: #f6f6f6;
+$alizarin-crimson: #da1f2a;
+$thunderbird: #bc1b24;
+$persian-red: #c53038;
+$sea-pink: #ea8d93;
+$bright-gray: #363a47;
+$curious-blue: #1390df;
+$denim: #1382c7;
+$boston-blue: #378dc3;
+$zircon: #f9fbff;
+$white-lilac: #f1f3f9;
+$raven: #6d778b;
+$hit-gray: #a8b1b7;
+
+//fonts 
+$baseFontSize: 14px;
+$font-size: $baseFontSize;
+$base-font-family: 'Montserrat';
+$custom-font-family: 'FiraSans';
+
+$font-weight-normal: 400;
+
+$line-height: normal;
+
+$line-height-xxxl: 40px;
+$line-height-extra-xxl: 32px;
+$line-height-xxl: 30px;
+$line-height-extra-xl: 26px;
+$line-height-xl: 24px;
+$line-height-extra-lg: 22px;
+$line-height-lg: 20px;
+$line-height-md: 18px;
+$line-height-extra-md: 16px;
+$line-height-sm: 15px;
+$line-height-extra-sm: 14px;
+$line-height-tiny: 12px;
+
+$font-size-title-large: 32px;
+$font-size-title-extra-big: 26px;
+$font-size-title-more-tiny: 16px;
+$font-size-title-smallest: 14px;
+
+$font-size-text-large: 22px;
+$font-size-text-big: 18px;
+$font-size-medium: 15px;
+$font-size-text-main: 13px;
+$font-size-text-small: 12px;
+$font-size-small: 11px;
+
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-extraBold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+//breakpoints
+$screen-mobile: "(max-width: 983px)";
+
+//transition
+$transition-duration: .2s;
+$transition-function: ease-out;
+$transition-default: all $transition-duration $transition-function;
+
+//border radius
+$border-radius-big: 10px;
+$border-radius: 6px;
+$border-radius-micro: 2px;
+$border-radius-tiny: 4px;
+$border-radius-small: 5px;
+$border-radius-semi: 8px;
+$border-radius-medium: 10px;
+$border-radius-average: 12px;
+$border-radius-large: 16px;
+$border-radius-extra-large: 20px;
+$border-radius-circle: 50%;
+
+//z-index
+$z-index-large: 500;
+$z-index-big: 6;
+$z-index-negative: -1;
